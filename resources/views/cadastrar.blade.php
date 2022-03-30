@@ -1,3 +1,7 @@
+@extends('app')
+@section('title', '')
+
+@section('conteudo')
 <div class="container principal">
 
     <div class="col-md-8 offset-md-2">
@@ -69,3 +73,4 @@
 
     </div>
   </div>
+  @endsection

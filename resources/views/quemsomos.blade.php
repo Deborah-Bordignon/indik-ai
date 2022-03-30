@@ -1,3 +1,7 @@
+@extends('app')
+@section('title', ' ')
+
+@section('conteudo')
 <div class="container principal">
            <!-- caroussel  -->
            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -43,11 +47,10 @@
       <div class="col-md-8 offset-md-2">
         
         <br>
-
-    
         <h2>Afinal o que é o <mark>ÍndiK-Aí?</mark></h2> 
         <p>Reunimos em um site todas indicações, afim de colocaborar com nossos empreendedores e autonômos <br>
           Buscamos sempre aprimorar nossos serviços, sempre com ênfase em oferecer indicações de qualidade e preço justo.
         </p>
       </div>
       </div>
+      @endsection

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Índik-Aí</title>
+    <title>Índik-Aí | @yield('title')</title>
 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="{{ url('/')}}/style.css">
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="pt-5">
     <!-- CABEÇALHO  -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
@@ -30,13 +30,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{route('indicacoes')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ÍndiK-Aí</a>
+            <a class="nav-link" href="{{route('cadastrar')}}">ÍndiK-Aí</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Quem Somos</a>
+            <a class="nav-link" href="{{route('quemsomos')}}">Quem Somos</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -50,7 +50,7 @@
 
 
   <!-- Conteudo aqui  -->
-
+  @yield('conteudo')
 
 
 

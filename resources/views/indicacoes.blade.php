@@ -1,3 +1,7 @@
+@extends('app')
+@section('title', '')
+
+@section('conteudo')
 <!-- div pai  -->
 <div class="container principal">
       
@@ -398,3 +402,4 @@
   
       </div>
     </div>
+    @endsection
