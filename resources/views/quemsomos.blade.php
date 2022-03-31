@@ -1,5 +1,5 @@
 @extends('app')
-@section('title', ' ')
+@section('title', 'Quem Somos ')
 
 @section('conteudo')
 <div class="container principal">

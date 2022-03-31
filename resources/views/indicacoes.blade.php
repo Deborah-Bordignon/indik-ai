@@ -1,5 +1,5 @@
 @extends('app')
-@section('title', '')
+@section('title', 'Home')
 
 @section('conteudo')
 <!-- div pai  -->

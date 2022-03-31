@@ -1,5 +1,5 @@
 @extends('app')
-@section('title', '')
+@section('title', 'Cadastrar indicação')
 
 @section('conteudo')
 <div class="container principal">
