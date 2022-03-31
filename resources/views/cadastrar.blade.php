@@ -10,21 +10,36 @@
       <form>
         <!-- Nome input -->
         <div class="form-outline mb-4">
-          <label class="form-label" for="form4Example1">Seu nome:</label>
-          <input type="text" id="user" class="form-control" name="user" required />
+          <label class="form-label" for="nome">Seu nome:</label>
+          <input type="text" id="nome" class="form-control" name="nome" required />
         </div>
 
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <label class="form-label" for="form4Example2">Email:</label>
+          <label class="form-label" for="email">Email:</label>
           <input type="email" id="email" class="form-control" name="email" required />
         </div>
 
         <!-- empresa indicada  -->
         <div class="form-outline mb-4">
-          <label class="form-label" for="form4Example1">Nome Empresa(Serviço) indicado:</label>
+          <label class="form-label" for="empresa-indicada">Nome Empresa(Serviço) indicado:</label>
           <input type="text" id="empresa-indicada" class="form-control" name="empresa-indicada" required />
         </div>
+
+        <!-- Cidade -->
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="cidade">Cidade:</label>
+                  <input type="text" id="cidade" class="form-control" name="cidade" required />
+                </div>
+
+
+        <!-- Estado -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="estado">Estado:</label>
+          <input type="text" id="estado" class="form-control" name="estado" required />
+        </div>
+
+        
 
         <!-- Telefone  -->
         <div class="form-outline mb-4">
@@ -60,8 +75,8 @@
 
         <!-- indicação  input -->
         <div class="form-outline mb-4">
-          <label class="form-label" for="form4Example3">ÍndiK-Aqui</label>
-          <textarea class="form-control" id="area-indicacao" name="area-indicacao" rows="4"
+          <label class="form-label" for="descricao">ÍndiK-Aqui</label>
+          <textarea class="form-control" id="descricao" name="descricao" rows="4"
             placeholder="Descreva sobre preço, qualidade, prazo, etc.." required></textarea>
         </div>
 
