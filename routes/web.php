@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndicacaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,10 @@ Route::get('/', function () {
 Route::get('cadastrar', function () {
     return view('cadastrar');
 })->name('cadastrar');
+
+Route::post('/add_indicacao', [IndicacaoController::class,
+'create'])->name('add_indicacao');
+
 
 Route::get('indicacoes', function () {
     return view('indicacoes');

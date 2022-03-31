@@ -21,6 +21,8 @@ return new class extends Migration
             $table->foreign('id_fornecedor')->references('id')->on('fornecedores');
             $table->text('comentario');
             $table->string('categoria');
+            $table->string('cidade');
+            $table->string('estado');
             $table->timestamps();
         });
     }

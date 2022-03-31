@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Indicacao extends Model
 {
     use HasFactory;
-    protected $fillable = ['comentario', 'categoria'];
+    // protected $fillable = ['comentario', 'categoria'];
 
     public function clientes()
     {
