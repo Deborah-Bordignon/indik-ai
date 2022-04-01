@@ -7,23 +7,30 @@
     <div class="col-md-8 offset-md-2">
       <h1 style="font-family: 'Times New Roman', Times, serif;">Cadastrar Indicações</h1>
 
-      <form name="indicacao" method="POST" action="{{route('add_indicacao')}}">
+      <form wire:submit.prevent="select_create">
         @csrf
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="email">Seu Email:</label>
+          <input type="email" id="email" class="form-control" name="email" required />
+        </div>
+
         <!-- Nome input -->
         <div class="form-outline mb-4">
           <label class="form-label" for="nome">Seu nome:</label>
           <input type="text" id="nome" class="form-control" name="nome" required />
         </div>
 
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <label class="form-label" for="email">Email:</label>
-          <input type="email" id="email" class="form-control" name="email" required />
+         <!-- Telefone  da empresa indicada  -->
+         <div class="form-outline mb-4">
+          <label class="form-label" for="telefone">Telefone do profissional indicado:</label>
+          <input type="tel" id="telefone" class="form-control" name="telefone" required />
         </div>
 
         <!-- empresa indicada  -->
         <div class="form-outline mb-4">
-          <label class="form-label" for="empresa-indicada">Nome Empresa(Serviço) indicado:</label>
+          <label class="form-label" for="empresa-indicada">Nome profissional indicado:</label>
           <input type="text" id="empresa-indicada" class="form-control" name="empresa-indicada" required />
         </div>
 
@@ -42,14 +49,6 @@
           </select>
         </div>
         
-
-        <!-- Telefone  -->
-        <div class="form-outline mb-4">
-          <label class="form-label" for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" class="form-control" name="telefone" required />
-        </div>
-
-
         <!-- Categoria  -->
         <div class="form-outline mb-4">
           <label class="form-label" for="selecao">Categoria Serviço:</label>
@@ -73,8 +72,8 @@
 
         <!-- indicação  input -->
         <div class="form-outline mb-4">
-          <label class="form-label" for="descricao">ÍndiK-Aqui</label>
-          <textarea class="form-control" id="descricao" name="descricao" rows="4"
+          <label class="form-label" for="comentario">ÍndiK-Aqui</label>
+          <textarea class="form-control" id="comentario" name="comentario" rows="4"
             placeholder="Descreva sobre preço, qualidade, prazo, etc.." required></textarea>
         </div>
 

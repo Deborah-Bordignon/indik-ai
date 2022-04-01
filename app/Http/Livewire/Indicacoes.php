@@ -1,14 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Livewire;
+
+use Livewire\Component;
 
 use App\Models\Fornecedor;
 use App\Models\Indicacao;
-use Illuminate\Http\Request;
+use Livewire\WithPagination;
 
-class IndicacaoController extends Controller
+
+class Indicacoes extends Component
 {
-    public function select_create(Request $request)
+    public function render()
+    {
+        return view('livewire.indicacoes');
+    }
+
+    public function select_create()
     {
         //Instancia a tabela Indicacao e Fornecedor
         $indicacao = new Indicacao;
@@ -23,8 +31,6 @@ class IndicacaoController extends Controller
             echo 'Fornecedor existe';
         }
 
-
-
         // $indicacao->
         // $indicacao->
         // $indicacao->
@@ -32,6 +38,7 @@ class IndicacaoController extends Controller
         // $indicacao->save();
         // return redirect('/');
 
-
     }
+
+
 }
