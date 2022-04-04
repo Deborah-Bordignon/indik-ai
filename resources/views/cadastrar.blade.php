@@ -7,7 +7,7 @@
     <div class="col-md-8 offset-md-2">
       <h1 style="font-family: 'Times New Roman', Times, serif;">Cadastrar Indicações</h1>
 
-      <form wire:submit.prevent="select_create">
+      <form action="{{route('add_indicacao')}}" method="POST" >
         @csrf
 
         <!-- Email input -->
@@ -30,8 +30,8 @@
 
         <!-- empresa indicada  -->
         <div class="form-outline mb-4">
-          <label class="form-label" for="empresa-indicada">Nome profissional indicado:</label>
-          <input type="text" id="empresa-indicada" class="form-control" name="empresa-indicada" required />
+          <label class="form-label" for="empresa_indicada">Nome profissional indicado:</label>
+          <input type="text" id="empresa_indicada" class="form-control" name="empresa_indicada" required />
         </div>
 
         <div class="form-outline mb-4">

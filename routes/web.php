@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndicacaoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\{
 	Indicacoes
@@ -21,24 +22,29 @@ Route::get('/', function () {
     return view('indicacoes');
 });
 
-/* Route::get('cadastrar', function () {
+Route::get('cadastrar', function () {
     return view('cadastrar');
-})->name('cadastrar'); */
+})->name('cadastrar');
 
-Route::get('cadastrar', Indicacoes::class)->middleware(['auth:sanctum', 'verified'])
-    ->name('cadastrar');
+Route::post('add_indicacao', [IndicacaoController::class,'select_create'])->name('add_indicacao');
 
-// Route::post('/add_indicacao', [IndicacaoController::class,
-// 'select_create'])->name('add_indicacao');
-
-
-/* Route::get('indicacoes', function () {
+Route::get('indicacoes', function () {
     return view('indicacoes');
-})->name('indicacoes'); */
+})->name('indicacoes');
 
 Route::get('quemsomos', function () {
     return view('quemsomos');
 })->name('quemsomos');
+
+
+
+
+
+
+
+
+// Route::post('/novoregistro', [IndicacaoController::class,
+// 'store'])->name('novoregistro');
 
 
 
