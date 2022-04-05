@@ -16,11 +16,8 @@ use App\Http\Livewire\{
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [IndicacaoController::class,'show_categorias']);
 
-Route::get('/', function () {
-    // return view('welcome');
-    return view('indicacoes');
-});
 
 Route::get('cadastrar', function () {
     return view('cadastrar');

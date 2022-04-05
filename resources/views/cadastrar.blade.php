@@ -56,17 +56,17 @@
             <option selected>Selecione uma categoria</option>
             <option value="Alimentícia">Alimentícia</option>
             <option value="Cabelereiro">Cabelereiro</option>
-            <option value="Colocador de Box">Colocador de Box</option>
+            <option value="Colocador_de_box">Colocador de Box</option>
             <option value="Contador">Contador</option>
             <option value="Designer">Designer</option>
             <option value="Eletricista">Eletricista</option>
             <option value="Escola">Escola</option>
-            <option value="Limpeza piscina">Limpeza piscina</option>
-            <option value="Marido de aluguel">Marido de aluguel</option>
+            <option value="Limpeza_piscina">Limpeza piscina</option>
+            <option value="Marido_aluguel">Marido de aluguel</option>
             <option value="Pedreiro">Pedreiro</option>
             <option value="Pintor">Pintor</option>
-            <option value="Técnico Informática">Técnico Informática</option>
-            <option value="Outros">Outros</option>
+            <option value="Técnico_informática">Técnico Informática</option>
+            <option value="Outro">Outros</option>
           </select>
         </div>    
 

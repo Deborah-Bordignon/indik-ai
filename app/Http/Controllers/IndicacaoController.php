@@ -54,4 +54,24 @@ class IndicacaoController extends Controller
             return redirect('indicacoes');
 
     }
+
+    public function show_categorias()
+    {
+        $alimenticias = Indicacao::where('categoria', 'Alimentícia')->get();
+        $Cabelereiros = Indicacao::where('categoria', 'Cabelereiro')->get();
+        $Colocador_de_boxs = Indicacao::where('categoria', 'Colocador_de_box')->get();
+        $Contadores = Indicacao::where('categoria', 'Contador')->get();
+        $Designers = Indicacao::where('categoria', 'Designer')->get();
+        $Eletricistas = Indicacao::where('categoria', 'Eletricista')->get();
+        $Escolas = Indicacao::where('categoria', 'Escola')->get();
+        $Limpeza_piscinas = Indicacao::where('categoria', 'Limpeza_piscina')->get();
+        $Marido_alugueis = Indicacao::where('categoria', 'Marido_aluguel')->get();
+        $Pedreiros = Indicacao::where('categoria', 'Pedreiro')->get();
+        $Pintores = Indicacao::where('categoria', 'Pintor')->get();
+        $Técnicos_informática = Indicacao::where('categoria', 'Técnico_informática')->get();
+        $Outros = Indicacao::where('categoria', 'Outro')->get();
+
+
+        return redirect('indicacoes', [$alimenticias, $Cabelereiros, $Colocador_de_boxs, $Contadores, $Designers, $Eletricistas, $Escolas, $Limpeza_piscinas, $Marido_alugueis,  $Pedreiros, $Pintores, $Técnicos_informática, $Outros]);
+    }
 }
