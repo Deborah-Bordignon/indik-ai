@@ -20,18 +20,23 @@
               Alimentícia
             </button>
           </h2>
+
+          @if (count($alimenticias) === 0)
+          <p>Não há indicações a exibir.</p>
+          @else
           <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
+              @foreach($alimenticias as $alimenticia)
               <!-- card  -->
               <div class="col-sm-6">
                 <div class="card m-4">
                   <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
+                    <h5 class="card-title">   </h5>
+                    <p class="card-cat">{{$alimenticia->categoria}}</p>
+                    <p class="card-cat">Telefone</p>
+                    <p class="card-cat">{{$alimenticia->estado}} | {{$alimenticia->cidade}}</p>
+                    <p class="card-text">{{$alimenticia->comentario}}</p>
                     <p class="card-user">Indicado por: Nome pessoa que indicou</p>
                      <!-- Avaliação estrelas  -->
                     <div class="row">
@@ -60,8 +65,11 @@
                   </div>
                 </div>
               </div>
+              @endforeach
             </div>
           </div>
+          @endif
+
         </div>
   
         <!-- acordion 2  -->
@@ -81,6 +89,8 @@
                   <div class="card-body">
                     <h5 class="card-title">Nome empresa Indicada</h5>
                     <p class="card-cat">Categoria serviço</p>
+                    <p class="card-cat">Telefone</p>
+                    <p class="card-cat">Cidade</p>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
                       dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
                       illum at aliquam. Voluptas facilis libero minima.</p>
@@ -104,18 +114,7 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -132,18 +131,9 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+
+
+             
             </div>
           </div>
         </div>
@@ -160,18 +150,11 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
+
+
+
             </div>
           </div>
         </div>
@@ -188,18 +171,8 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
             </div>
           </div>
         </div>
@@ -216,18 +189,10 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+             
+
+
+
             </div>
           </div>
         </div>
@@ -244,18 +209,12 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -272,18 +231,12 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -300,18 +253,11 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
+
+
+
             </div>
           </div>
         </div>
@@ -328,18 +274,9 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
+
             </div>
           </div>
         </div>
@@ -356,18 +293,10 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
+
+
             </div>
           </div>
         </div>
@@ -384,22 +313,31 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- card  -->
-              <div class="col-sm-6">
-                <div class="card m-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
-                  </div>
-                </div>
-              </div>
+              
+
+
+
+
+
             </div>
           </div>
         </div>
   
       </div>
     </div>
+
+
+
+
+    <script>
+      function getEstado(uf)
+      {
+        var url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' +uf;
+        var estado = '';
+        
+        return estado;
+      }
+
+   
+    </script>
     @endsection
