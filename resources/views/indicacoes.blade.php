@@ -32,12 +32,13 @@
               <div class="col-sm-6">
                 <div class="card m-4">
                   <div class="card-body">
-                    <h5 class="card-title">   </h5>
+                    <h5 class="card-title">{{$alimenticia->empresa_indicada}}</h5>
                     <p class="card-cat">{{$alimenticia->categoria}}</p>
-                    <p class="card-cat">Telefone</p>
-                    <p class="card-cat"> <span class="nome-estado" cod-estado="{{$alimenticia->estado}}" ></span>  | {{$alimenticia->cidade}}</p>
+                    <p class="card-cat">{{$alimenticia->telefone}}}}</p>
+                    <p class="card-cat"> <span class="nome-estado" cod-estado="{{$alimenticia->estado}}" ></span> 
+                     | {{$alimenticia->cidade}}</p>
                     <p class="card-text">{{$alimenticia->comentario}}</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
+                    <p class="card-user">Indicado por: {{$alimenticia->nome}}</p>
                      <!-- Avaliação estrelas  -->
                     <div class="row">
                       <div class="feedback col-6">
@@ -54,13 +55,13 @@
                           <label for="rating-1"></label>
                         </div>
                       </div>
-                      <div class="col-6 text-end">
+                      <!-- <div class="col-6 text-end">
                         <i class="fa-solid fa-star"></i> 0 <br>
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 2 <br>
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5 <br>
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 8 <br>
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"> </i> 15 <br>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -80,26 +81,55 @@
               Cabelereiro
             </button>
           </h2>
+          @if (count($cabelereiros) === 0)
+          <p>Não há indicações a exibir.</p>
+          @else
           <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
+              @foreach($cabelereiros as $cabelereiro)
               <!-- card  -->
               <div class="col-sm-6">
                 <div class="card m-4">
                   <div class="card-body">
-                    <h5 class="card-title">Nome empresa Indicada</h5>
-                    <p class="card-cat">Categoria serviço</p>
-                    <p class="card-cat">Telefone</p>
-                    <p class="card-cat">Cidade</p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate rem
-                      dolorum soluta praesentium consequuntur natus illo aliquid mollitia obcaecati ut animi aut,
-                      illum at aliquam. Voluptas facilis libero minima.</p>
-                    <p class="card-user">Indicado por: Nome pessoa que indicou</p>
+                    <h5 class="card-title">{{$cabelereiro->empresa_indicada}}</h5>
+                    <p class="card-cat">{{$cabelereiro->categoria}}</p>
+                    <p class="card-cat">{{$cabelereiro->telefone}}}}</p>
+                    <p class="card-cat"> <span class="nome-estado" cod-estado="{{$cabelereiro->estado}}" ></span> 
+                     | {{$cabelereiro->cidade}}</p>
+                    <p class="card-text">{{$cabelereiro->comentario}}</p>
+                    <p class="card-user">Indicado por: {{$cabelereiro->nome}}</p>
+                     <!-- Avaliação estrelas  -->
+                    <div class="row">
+                      <div class="feedback col-6">
+                        <div class="rating">
+                          <input type="radio" name="rating" id="rating-5">
+                          <label for="rating-5"></label>
+                          <input type="radio" name="rating" id="rating-4">
+                          <label for="rating-4"></label>
+                          <input type="radio" name="rating" id="rating-3">
+                          <label for="rating-3"></label>
+                          <input type="radio" name="rating" id="rating-2">
+                          <label for="rating-2"></label>
+                          <input type="radio" name="rating" id="rating-1">
+                          <label for="rating-1"></label>
+                        </div>
+                      </div>
+                      <!-- <div class="col-6 text-end">
+                        <i class="fa-solid fa-star"></i> 0 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 2 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 8 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"> </i> 15 <br>
+                      </div> -->
+                    </div>
                   </div>
                 </div>
               </div>
+              @endforeach
             </div>
           </div>
+          @endif
         </div>
   
         <!-- acordion 3  -->

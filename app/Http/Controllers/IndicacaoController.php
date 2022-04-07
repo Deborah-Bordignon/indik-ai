@@ -55,21 +55,36 @@ class IndicacaoController extends Controller
 
     }
 
+
+
     public function show_categorias()
     {
-        $alimenticias = Indicacao::where('categoria', 'Alimentícia')->get();
-        $cabelereiros = Indicacao::where('categoria', 'Cabelereiro')->get();
-        $colocador_de_boxs = Indicacao::where('categoria', 'Colocador_de_box')->get();
-        $contadores = Indicacao::where('categoria', 'Contador')->get();
-        $designers = Indicacao::where('categoria', 'Designer')->get();
-        $eletricistas = Indicacao::where('categoria', 'Eletricista')->get();
-        $escolas = Indicacao::where('categoria', 'Escola')->get();
-        $limpeza_piscinas = Indicacao::where('categoria', 'Limpeza_piscina')->get();
-        $marido_alugueis = Indicacao::where('categoria', 'Marido_aluguel')->get();
-        $pedreiros = Indicacao::where('categoria', 'Pedreiro')->get();
-        $pintores = Indicacao::where('categoria', 'Pintor')->get();
-        $tecnicos_informatica = Indicacao::where('categoria', 'Técnico_informática')->get();
-        $outros = Indicacao::where('categoria', 'Outro')->get();
+        $alimenticias = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Alimentícia')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $cabelereiros = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Cabelereiro')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $colocador_de_boxs = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $contadores = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $designers = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $eletricistas = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $escolas = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $limpeza_piscinas = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $marido_alugueis = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $pedreiros = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $pintores = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $tecnicos_informatica = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        $outros = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
 
        $parametros = [
         'alimenticias' => $alimenticias, 
