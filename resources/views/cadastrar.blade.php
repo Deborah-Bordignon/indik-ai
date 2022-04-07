@@ -13,25 +13,25 @@
         <!-- Email input -->
         <div class="form-outline mb-4">
           <label class="form-label" for="email">Seu Email:</label>
-          <input type="email" id="email" class="form-control" name="email" required />
+          <input type="email" id="email" class="form-control" name="email" required placeholder="exemplo@gmail.com" />
         </div>
 
         <!-- Nome input -->
         <div class="form-outline mb-4">
           <label class="form-label" for="nome">Seu nome:</label>
-          <input type="text" id="nome" class="form-control" name="nome" required />
+          <input type="text" id="nome" class="form-control" name="nome" required placeholder="Nome"/>
         </div>
 
          <!-- Telefone  da empresa indicada  -->
          <div class="form-outline mb-4">
           <label class="form-label" for="telefone">Telefone do profissional indicado:</label>
-          <input type="tel" id="telefone" class="form-control" name="telefone" required />
+          <input type="tel" id="telefone" class="form-control" name="telefone" required placeholder="Telefone Profissional ou empresa indicada" />
         </div>
 
         <!-- empresa indicada  -->
         <div class="form-outline mb-4">
           <label class="form-label" for="empresa_indicada">Nome profissional indicado:</label>
-          <input type="text" id="empresa_indicada" class="form-control" name="empresa_indicada" required />
+          <input type="text" id="empresa_indicada" class="form-control" name="empresa_indicada" required placeholder="Ex: Deborah Designer" />
         </div>
 
         <div class="form-outline mb-4">

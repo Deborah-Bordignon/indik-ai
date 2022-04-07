@@ -61,30 +61,42 @@ class IndicacaoController extends Controller
     {
         $alimenticias = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
         ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Alimentícia')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $cabelereiros = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
         ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Cabelereiro')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $colocador_de_boxs = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Colocador_de_box')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $contadores = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Contador')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $designers = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Designer')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $eletricistas = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Eletricista')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $escolas = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Escola')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $limpeza_piscinas = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Limpeza_piscina')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $marido_alugueis = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Marido_aluguel')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $pedreiros = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Pedreiro')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        
         $pintores = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Pintor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $tecnicos_informatica = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Técnico_informática')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+
         $outros = Indicacao::join('clientes', 'clientes.id', '=','indicacaos.id_cliente')
-        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
+        ->join('fornecedors', 'fornecedors.id', '=','indicacaos.id_fornecedor')->where('categoria', 'Outro')->get(['indicacaos.*', 'fornecedors.telefone','fornecedors.empresa_indicada','clientes.nome']);
 
        $parametros = [
         'alimenticias' => $alimenticias, 
