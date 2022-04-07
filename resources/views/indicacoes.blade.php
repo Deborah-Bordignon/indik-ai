@@ -35,7 +35,7 @@
                     <h5 class="card-title">   </h5>
                     <p class="card-cat">{{$alimenticia->categoria}}</p>
                     <p class="card-cat">Telefone</p>
-                    <p class="card-cat">{{$alimenticia->estado}} | {{$alimenticia->cidade}}</p>
+                    <p class="card-cat"> <span class="nome-estado" cod-estado="{{$alimenticia->estado}}" ></span>  | {{$alimenticia->cidade}}</p>
                     <p class="card-text">{{$alimenticia->comentario}}</p>
                     <p class="card-user">Indicado por: Nome pessoa que indicou</p>
                      <!-- Avaliação estrelas  -->
@@ -330,14 +330,24 @@
 
 
     <script>
-      function getEstado(uf)
+      //Função que escreve o nome do estado baseado num elemento html e código do estado
+      // atributos elemento e uf 
+      function getEstado(elemento, uf)
       {
         var url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' +uf;
-        var estado = '';
-        
-        return estado;
+        fetch(url)
+          .then( res => res.json() )
+          .then( res => {
+            elemento.innerHTML =  res.nome;
+        });
       }
 
+      //cria uma array (lista) das tags com nome de classe nome-estado
+      const estados = document.querySelectorAll('.nome-estado');
+      //percorre cada item da lista e executa a função getEstado
+      estados.forEach( (estado) => {
+        getEstado(estado, estado.getAttribute('cod-estado'));
+      });
    
     </script>
     @endsection
