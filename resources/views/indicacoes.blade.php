@@ -139,10 +139,70 @@
               Colocar de box
             </button>
           </h2>
-          @if (count($colocador_de_boxs) === 0)
+          @if (count($contadores) === 0)
           <p>Não há indicações a exibir.</p>
           @else
           <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              @foreach($contadores as $Contador)
+              <!-- card  -->
+              <div class="col-sm-6">
+                <div class="card m-4">
+                  <div class="card-body">
+                    <h5 class="card-title">{{$Contador->empresa_indicada}}</h5>
+                    <!-- <p class="card-cat">{{$Colocador_de_box->categoria}}</p> -->
+                    <p class="card-cat">{{$Contador->telefone}}</p>
+                    <p class="card-cat"> <span class="nome-estado" cod-estado="{{$Contador->estado}}" ></span> 
+                     | {{$Contador->cidade}}</p>
+                    <p class="card-text">{{$Contador->comentario}}</p>
+                    <p class="card-user">Indicado por: {{$Contador->nome}}</p>
+                     <!-- Avaliação estrelas  -->
+                    <div class="row">
+                      <div class="feedback col-6">
+                        <div class="rating">
+                          <input type="radio" name="rating" id="rating-5">
+                          <label for="rating-5"></label>
+                          <input type="radio" name="rating" id="rating-4">
+                          <label for="rating-4"></label>
+                          <input type="radio" name="rating" id="rating-3">
+                          <label for="rating-3"></label>
+                          <input type="radio" name="rating" id="rating-2">
+                          <label for="rating-2"></label>
+                          <input type="radio" name="rating" id="rating-1">
+                          <label for="rating-1"></label>
+                        </div>
+                      </div>
+                      <!-- <div class="col-6 text-end">
+                        <i class="fa-solid fa-star"></i> 0 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 2 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 8 <br>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"> </i> 15 <br>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              @endforeach
+            </div>
+          </div>
+          @endif
+         </div>
+          
+  
+        <!-- acordion 4  -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+              Contador
+            </button>
+
+            @if (count($colocador_de_boxs) === 0)
+          <p>Não há indicações a exibir.</p>
+          @else
+          <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               @foreach($colocador_de_boxs as $Colocador_de_box)
@@ -188,26 +248,8 @@
             </div>
           </div>
           @endif
-         </div>
-          
-  
-        <!-- acordion 4  -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-heading4">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
-              Contador
-            </button>
-          </h2>
-          <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <!-- card  -->
 
 
-             
-            </div>
-          </div>
         </div>
   
         <!-- acordion 5  -->
